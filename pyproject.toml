@@ -1,17 +1,16 @@
+
 [project]
-packages = [{ include = "agente_ucv" }]
 name = "laboratorio-adk-ucv"
 version = "0.1.0"
 description = "laboratorio_8"
 authors = [
-    {name = "Anthony Corpus",email = "anthonycorpuscarranza@gmail.com"}
+    {name = "Anthony Corpus", email = "anthonycorpuscarranza@gmail.com"}
 ]
 requires-python = ">=3.14"
 dependencies = [
     "google-adk (>=2.13.0,<3.0.0)",
     "python-dotenv (>=1.2.4,<2.0.0)"
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -21,9 +20,7 @@ build-backend = "poetry.core.masonry.api"
 dev = [
     "pytest (>=9.2.0,<10.0.0)"
 ]
-[tool.pytest.ini_options]
-pythonpath = ["."]
-testpaths = ["test"]
+
 [tool.poetry]
 packages = [{ include = "agente_ucv" }]
 
