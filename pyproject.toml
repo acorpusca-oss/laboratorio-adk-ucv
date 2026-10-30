@@ -24,3 +24,9 @@ dev = [
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["test"]
+[tool.poetry]
+packages = [{ include = "agente_ucv" }]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["test"]
