@@ -2,9 +2,8 @@ name: Pipeline del Agente UCV
 
 on:
   push:
-    branches: [main]
   pull_request:
-    branches: [main]
+  workflow_dispatch:
 
 jobs:
   pruebas:
@@ -12,10 +11,10 @@ jobs:
 
     steps:
       - name: Descargar repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.14"
 
@@ -23,7 +22,7 @@ jobs:
         run: pip install poetry
 
       - name: Instalar dependencias
-        run: poetry install
+        run: poetry install --no-interaction
 
       - name: Ejecutar pruebas unitarias
         run: poetry run pytest -v
